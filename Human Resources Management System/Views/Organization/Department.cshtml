@@ -1,4 +1,9 @@
-﻿@{
+﻿@model Human_Resources_Management_System.Models.Department;
+
+@{
+}
+
+@{
     //ViewData["Title"] = "Home Page";
     Layout = null;
 }
@@ -64,7 +69,7 @@
                     Interface
                 </div>
 
-                <!-- Nav Item - Organization Collapse Menu -->
+                <!-- Nav Item - Pages Collapse Menu -->
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                        aria-expanded="true" aria-controls="collapseTwo">
@@ -82,107 +87,20 @@
                     </div>
                 </li>
 
-                <!-- Nav Item - Employees Collapse Menu -->
+                <!-- Nav Item - Utilities Collapse Menu -->
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                        aria-expanded="true" aria-controls="collapseUtilities">
                         <i class="fas fa-fw fa-wrench"></i>
-                        <span>Employees</span>
+                        <span>Utilities</span>
                     </a>
                     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                          data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Custom Utilities:</h6>
-                            <a class="collapse-item" asp-controller="Employees"
-                               asp-action="Employees"><i class="far fa-folder-open"></i> Employees</a>
-                            <a class="collapse-item" asp-controller="Employees"
-                               asp-action="DisciplinaryList"><i class="far fa-folder-open"></i> Disciplinary</a>
-                            <a class="collapse-item" href="utilities-other.html">Other</a>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Nav Item - Attendance Collapse Menu -->
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#attendanceMenu"
-                       aria-expanded="true" aria-controls="attendanceMenu">
-                        <i class="fas fa-fw fa-wrench"></i>
-                        <span>Attendance</span>
-                    </a>
-                    <div id="attendanceMenu" class="collapse" aria-labelledby="headingUtilities"
-                         data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Custom Utilities:</h6>
-                            <a class="collapse-item" asp-controller="Attendance"
-                               asp-action="AttendanceList"><i class="far fa-folder-open"></i> Attendance List</a>
-                            <a class="collapse-item" asp-controller="Attendance"
-                               asp-action="AddAttendance"><i class="far fa-folder-open"></i> Add Attendance</a>
-                            <a class="collapse-item" href="utilities-other.html">Other</a>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Nav Item - Leave Collapse Menu -->
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#leaveMenu"
-                       aria-expanded="true" aria-controls="leaveMenu">
-                        <i class="fas fa-fw fa-wrench"></i>
-                        <span>Leave</span>
-                    </a>
-                    <div id="leaveMenu" class="collapse" aria-labelledby="headingUtilities"
-                         data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Custom Utilities:</h6>
-                            <a class="collapse-item" asp-controller="Leave"
-                               asp-action="HolidayLeave"><i class="far fa-folder-open"></i> Holiday</a>
-                            <a class="collapse-item" asp-controller="Leave"
-                               asp-action="LeaveType"><i class="far fa-folder-open"></i> Leave Type</a>
-                            <a class="collapse-item" asp-controller="Leave"
-                               asp-action="LeaveApplication"><i class="far fa-folder-open"></i> Leave Application</a>
-                            <a class="collapse-item" asp-controller="Leave"
-                               asp-action="EarnedLeave"><i class="far fa-folder-open"></i> Earned Leave</a>
-
-                            <a class="collapse-item" href="utilities-other.html">Other</a>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Nav Item - Project Collapse Menu -->
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#projectMenu"
-                       aria-expanded="true" aria-controls="projectMenu">
-                        <i class="fas fa-fw fa-wrench"></i>
-                        <span>Project</span>
-                    </a>
-                    <div id="projectMenu" class="collapse" aria-labelledby="headingUtilities"
-                         data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Custom Utilities:</h6>
-                            <a class="collapse-item" asp-controller="Project"
-                               asp-action="Projects"><i class="far fa-folder-open"></i> Projects</a>
-                            <a class="collapse-item" asp-controller="Project"
-                               asp-action="TaskList"><i class="far fa-folder-open"></i> Task List</a>
-                            <a class="collapse-item" asp-controller="Project"
-                               asp-action="FieldVisit"><i class="far fa-folder-open"></i> Field Visit</a>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Nav Item - Payroll Collapse Menu -->
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#payrollMenu"
-                       aria-expanded="true" aria-controls="payrollMenu">
-                        <i class="fas fa-fw fa-wrench"></i>
-                        <span>Payroll</span>
-                    </a>
-                    <div id="payrollMenu" class="collapse" aria-labelledby="headingUtilities"
-                         data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Custom Utilities:</h6>
-                            <a class="collapse-item" asp-controller="Payroll"
-                               asp-action="PayrollList"><i class="far fa-folder-open"></i> Payroll List</a>
-                            <a class="collapse-item" href="utilities-border.html">Disciplinary</a>
-                            <a class="collapse-item" href="utilities-animation.html">Inactive User</a>
+                            <a class="collapse-item" href="utilities-color.html">Colors</a>
+                            <a class="collapse-item" href="utilities-border.html">Borders</a>
+                            <a class="collapse-item" href="utilities-animation.html">Animations</a>
                             <a class="collapse-item" href="utilities-other.html">Other</a>
                         </div>
                     </div>
@@ -253,68 +171,171 @@
         }
 
 
-        <html>
+        <!-- Beginning of flex to put elements side by side -->
+        <style>
+            .container {
+                display: flex;
+            }
+        </style>
+        <!-- End of flex to put elements side by side -->
+        <!-- Beginning of Container -->
+        <div class="container">
+
+            <!-- Start of Box with text and submit field  for department-->
+            <html>
+            <head>
+                <title>Fixed Size Box with Text, Input, and Submit Button</title>
+                <style>
+                    .fixedBox {
+                        width: 300px; /* Set the width of the box */
+                        height: 200px; /* Set the height of the box */
+                        border: 1px solid #000; /* Border for the box */
+                        resize: none; /* Disable resizing */
+                        overflow: hidden; /* Hide content overflow */
+                        padding: 20px; /* Add padding inside the box */
+                        margin: 10px; /* Adds space around the element */
+                        box-sizing: border-box; /* Include padding in box size */
+                        display: flex; /* Use flexbox for layout */
+                        flex-direction: column; /* Arrange items vertically */
+                    }
+
+                    .boxText {
+                        font-weight: bold; /* Make the text bold */
+                        margin-bottom: 10px; /* Add space below the text */
+                    }
+
+                    .inputField {
+                        margin-bottom: 10px; /* Add space below the input */
+                        padding: 8px; /* Add padding to the input */
+                        border: 1px solid #ccc; /* Input border */
+                        border-radius: 4px; /* Rounded corners for input */
+                    }
+
+                    .submitButton {
+                        padding: 8px 16px; /* Add padding to the button */
+                        border: none; /* Remove button border */
+                        background-color: #007bff; /* Button background color */
+                        color: white; /* Button text color */
+                        cursor: pointer; /* Change cursor to pointer on hover */
+                        border-radius: 4px; /* Rounded corners for button */
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="fixedBox">
+                    <div class="boxText">Department Name:</div>
+                    <input type="text" class="inputField" placeholder="Your input...">
+                    <input type="submit" class="submitButton" value="Submit">
+                </div>
+            </body>
+        </html>
+
+        <!-- Start of Box with text and submit field  for department -->
+        <!-- Start of Department - Column list with edit/delete buttons -->
+
+        <html lang="en">
         <head>
-            <title>Fixed Size Box with Text, Input, and Submit Button</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Button Table</title>
             <style>
-                .fixedBox {
-                    width: 300px; /* Set the width of the box */
-                    height: 200px; /* Set the height of the box */
-                    border: 1px solid #000; /* Border for the box */
-                    resize: none; /* Disable resizing */
-                    overflow: hidden; /* Hide content overflow */
-                    padding: 20px; /* Add padding inside the box */
-                    box-sizing: border-box; /* Include padding in box size */
-                    display: flex; /* Use flexbox for layout */
-                    flex-direction: column; /* Arrange items vertically */
+                body {
+                    font-family: Arial, sans-serif;
                 }
 
-                .boxText {
-                    font-weight: bold; /* Make the text bold */
-                    margin-bottom: 10px; /* Add space below the text */
+                table {
+                    width: 50%;
+                    border-collapse: collapse;
+                    margin-bottom: 20px;
                 }
 
-                .inputField {
-                    margin-bottom: 10px; /* Add space below the input */
-                    padding: 8px; /* Add padding to the input */
-                    border: 1px solid #ccc; /* Input border */
-                    border-radius: 4px; /* Rounded corners for input */
+                th, td {
+                    text-align: left;
+                    padding: 10px;
                 }
 
-                .submitButton {
-                    padding: 8px 16px; /* Add padding to the button */
-                    border: none; /* Remove button border */
-                    background-color: #007bff; /* Button background color */
-                    color: white; /* Button text color */
-                    cursor: pointer; /* Change cursor to pointer on hover */
-                    border-radius: 4px; /* Rounded corners for button */
+                td {
+                    position: relative;
                 }
+
+                .button-container {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: flex;
+                }
+
+                    .button-container button {
+                        margin-left: 5px;
+                    }
             </style>
         </head>
         <body>
-            <div class="fixedBox">
-                <div class="boxText">Enter your information:</div>
-                <input type="text" class="inputField" placeholder="Your input...">
-                <input type="submit" class="submitButton" value="Submit">
-            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Department Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Table Row Content
+                            <div class="button-container">
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Table Row Content
+                            <div class="button-container">
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Table Row Content
+                            <div class="button-container">
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Table Row Content
+                            <div class="button-container">
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Table Row Content
+                            <div class="button-container">
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+
         </body>
     </html>
 
+    <!-- End of Department - Column list with edit/delete buttons -->
 
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5">
-            <div class="col">
-                <p>
-                    <a id="adminPills" class="btn btn-outline-primary text-decoration-none"
-                       asp-controller="Organization"
-                       asp-action="Department"><i class="far fa-folder-open"></i> New Blog</a>
-                </p>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Content Wrapper -->
+</div>
+<!-- End of Container-->
+<!-- Content Wrapper -->
         @*    <div id="content-wrapper" class="d-flex flex-column">
     <!-- User.IsInRole("Administrator")-->
     @if (true)
@@ -885,17 +906,15 @@
 
 
 
-        @*            <!-- Footer -->
+@*     <!-- Footer -->
     <footer class="sticky-footer bg-white">
-    <div class="container my-auto">
-    <div class="copyright text-center my-auto">
-    <span>Copyright &copy; Your Website 2021</span>
-    </div>
-    </div>
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; Rewired Programming 2023</span>
+            </div>
+        </div>
     </footer>
     <!-- End of Footer --> *@
-
-
 
 
 </div>
@@ -903,8 +922,21 @@
     </div>
 
 
+
+@*         <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; Rewired Programming 2023</span>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer --> *@
+
+
 <html>
 <head>
+    <title>Your Website</title>
     <style>
         /* CSS styles for the footer */
         body {
@@ -916,10 +948,11 @@
             /* background-color: #333; */
             color: gray;
             text-align: center;
-            /* padding: 20px 0; /* Adjust the padding as needed */
+            /* padding: 20px 0; /* Adjust the padding as needed */ 
             position: relative;
             bottom: 0;
             width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -937,6 +970,8 @@
 
 </body>
 </html>
+
+
 
 <!-- End of Page Wrapper -->
 <!-- Scroll to Top Button-->
@@ -964,6 +999,7 @@
     </div>
 </div>
 
+
 <!-- Bootstrap core JavaScript-->
 <script src="~/bootstrap pasted/vendor/jquery/jquery.min.js"></script>
 <script src="~/bootstrap pasted/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -982,5 +1018,4 @@
 <script src="~/bootstrap pasted/js/demo/chart-pie-demo.js"></script>
 
 </body>
-
 </html>
