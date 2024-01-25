@@ -9,6 +9,8 @@ namespace Human_Resources_Management_System.Models
         public string EmployeeName { get; set; }
         public int Pin { get; set; }
         public string LeaveType { get; set; }
+        public string StartDate { get; set; }
+        public string ApplyDate { get; set; }
         public string EndDate { get; set; }
         public string Duration { get; set; }
         public string LeaveStatus { get; set; }

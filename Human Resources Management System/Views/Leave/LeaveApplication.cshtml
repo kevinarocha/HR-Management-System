@@ -1,4 +1,4 @@
-﻿@model Human_Resources_Management_System.Models.LeaveApplication;
+﻿@model List<Human_Resources_Management_System.Models.LeaveApplication>;
 @{
     //ViewData["Title"] = "Home Page";
     Layout = null;
@@ -32,8 +32,6 @@
 
     <!-- Page Wrapper -->
     <div id="wrapper">
-
-        <!--User.IsInRole("Administrator")-->
         @if (true)
         {
             <!-- Sidebar -->
@@ -66,36 +64,126 @@
                     Interface
                 </div>
 
-                <!-- Nav Item - Pages Collapse Menu -->
+                <!-- Nav Item - Organization Collapse Menu -->
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                        aria-expanded="true" aria-controls="collapseTwo">
                         <i class="fas fa-fw fa-cog"></i>
-                        <span>Components</span>
+                        <span>Organization</span>
                     </a>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Custom Components:</h6>
-                            <a class="collapse-item" href="buttons.html">Buttons</a>
+                            @*  <a class="collapse-item"   href="buttons.html">Department</a> *@
+                            <a class="collapse-item" asp-controller="Organization"
+                               asp-action="Department"> <i class="far fa-folder-open"></i> Department</a>
                             <a class="collapse-item" href="cards.html">Cards</a>
                         </div>
                     </div>
                 </li>
 
-                <!-- Nav Item - Utilities Collapse Menu -->
+                <!-- Nav Item - Employees Collapse Menu -->
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                        aria-expanded="true" aria-controls="collapseUtilities">
                         <i class="fas fa-fw fa-wrench"></i>
-                        <span>Utilities</span>
+                        <span>Employees</span>
                     </a>
                     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                          data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Custom Utilities:</h6>
-                            <a class="collapse-item" href="utilities-color.html">Colors</a>
-                            <a class="collapse-item" href="utilities-border.html">Borders</a>
-                            <a class="collapse-item" href="utilities-animation.html">Animations</a>
+                            <a class="collapse-item" asp-controller="Employees"
+                               asp-action="Employees"><i class="far fa-folder-open"></i> Employees</a>
+                            <a class="collapse-item" asp-controller="Employees"
+                               asp-action="DisciplinaryList"><i class="far fa-folder-open"></i> Disciplinary</a>
+                            <a class="collapse-item" href="utilities-other.html">Other</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Nav Item - Attendance Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#attendanceMenu"
+                       aria-expanded="true" aria-controls="attendanceMenu">
+                        <i class="fas fa-fw fa-wrench"></i>
+                        <span>Attendance</span>
+                    </a>
+                    <div id="attendanceMenu" class="collapse" aria-labelledby="headingUtilities"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Utilities:</h6>
+                            <a class="collapse-item" asp-controller="Attendance"
+                               asp-action="AttendanceList"><i class="far fa-folder-open"></i> Attendance List</a>
+                            <a class="collapse-item" asp-controller="Attendance"
+                               asp-action="AddAttendance"><i class="far fa-folder-open"></i> Add Attendance</a>
+                            <a class="collapse-item" href="utilities-other.html">Other</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Nav Item - Leave Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#leaveMenu"
+                       aria-expanded="true" aria-controls="leaveMenu">
+                        <i class="fas fa-fw fa-wrench"></i>
+                        <span>Leave</span>
+                    </a>
+                    <div id="leaveMenu" class="collapse" aria-labelledby="headingUtilities"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Utilities:</h6>
+                            <a class="collapse-item" asp-controller="Leave"
+                               asp-action="HolidayLeave"><i class="far fa-folder-open"></i> Holiday</a>
+                            <a class="collapse-item" asp-controller="Leave"
+                               asp-action="LeaveType"><i class="far fa-folder-open"></i> Leave Type</a>
+                            <a class="collapse-item" asp-controller="Leave"
+                               asp-action="LeaveApplication"><i class="far fa-folder-open"></i> Leave Application</a>
+                            <a class="collapse-item" asp-controller="Leave"
+                               asp-action="EarnedLeave"><i class="far fa-folder-open"></i> Earned Leave</a>
+
+                            <a class="collapse-item" href="utilities-other.html">Other</a>
+                        </div>
+                    </div>
+                </li>
+
+
+                <!-- Nav Item - Project Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#projectMenu"
+                       aria-expanded="true" aria-controls="projectMenu">
+                        <i class="fas fa-fw fa-wrench"></i>
+                        <span>Project</span>
+                    </a>
+                    <div id="projectMenu" class="collapse" aria-labelledby="headingUtilities"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Utilities:</h6>
+                            <a class="collapse-item" asp-controller="Project"
+                               asp-action="Projects"><i class="far fa-folder-open"></i> Projects</a>
+                            <a class="collapse-item" asp-controller="Project"
+                               asp-action="TaskList"><i class="far fa-folder-open"></i> Task List</a>
+                            <a class="collapse-item" asp-controller="Project"
+                               asp-action="FieldVisit"><i class="far fa-folder-open"></i> Field Visit</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Nav Item - Payroll Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#payrollMenu"
+                       aria-expanded="true" aria-controls="payrollMenu">
+                        <i class="fas fa-fw fa-wrench"></i>
+                        <span>Payroll</span>
+                    </a>
+                    <div id="payrollMenu" class="collapse" aria-labelledby="headingUtilities"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Utilities:</h6>
+                            <a class="collapse-item" asp-controller="Payroll"
+                               asp-action="PayrollList"><i class="far fa-folder-open"></i> Payroll List</a>
+                            <a class="collapse-item" href="utilities-border.html">Disciplinary</a>
+                            <a class="collapse-item" href="utilities-animation.html">Inactive User</a>
                             <a class="collapse-item" href="utilities-other.html">Other</a>
                         </div>
                     </div>
@@ -311,14 +399,87 @@
                 <!-- Add Application Popup -->
                 <div class="popup" id="addApplicationPopup">
                     <h3>Add Application</h3>
-                    <input type="text" placeholder="Employee Name" />
-                    <select>
-                        <option value="vacation">Vacation</option>
-                        <option value="sick">Sick Leave</option>
-                        <!-- Add more leave types as needed -->
-                    </select>
-                    <input type="date" placeholder="Start Date" />
-                    <input type="date" placeholder="End Date" />
+                    <div class="container px-4 px-lg-5">
+                        <div class="row gx-4 gx-lg-5 justify-content-center">
+                            <div class="col-lg-8 col-md-10 mx-auto">
+                                <form asp-action="Department" enctype="multipart/form-data">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="form-group">
+                                        <label asp-for="@Model.FirstOrDefault().EmployeeName" class="control-label"></label>
+                                        <input asp-for="@Model.FirstOrDefault().EmployeeName" class="form-control" required />
+                                        <span asp-validation-for="@Model.FirstOrDefault().EmployeeName" class="text-danger"></span>
+                                    </div>
+                                    @*                         <div class="form-group mt-4">
+                                    <label asp-for="Description" class="control-label"></label>
+                                    <textarea asp-for="Description" class="form-control" required></textarea>
+                                    <span asp-validation-for="Description" class="text-danger"></span>
+                                    </div> *@
+                                    @*                         <div class="form-group mt-4">
+                                    <label asp-for="Image" class="control-label"></label>
+                                    <input type="file" asp-for="Image" class="form-control" accept=".jpg,.png,.jpeg" />
+                                    <span asp-validation-for="Image" class="text-danger"></span>
+                                    </div> *@
+                                    <div class="form-group mt-4">
+                                        <input type="submit" value="Create" class="btn btn-primary" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container px-4 px-lg-5">
+                        <div class="row gx-4 gx-lg-5 justify-content-center">
+                            <div class="col-lg-8 col-md-10 mx-auto">
+                                <form asp-action="Department" enctype="multipart/form-data">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="form-group">
+                                        <label asp-for="@Model.FirstOrDefault().LeaveType" class="control-label"></label>
+                                        <input asp-for="@Model.FirstOrDefault().LeaveType" class="form-control" required />
+                                        <span asp-validation-for="@Model.FirstOrDefault().LeaveType" class="text-danger"></span>
+                                    </div>
+                                    @*                         <div class="form-group mt-4">
+                                    <label asp-for="Description" class="control-label"></label>
+                                    <textarea asp-for="Description" class="form-control" required></textarea>
+                                    <span asp-validation-for="Description" class="text-danger"></span>
+                                    </div> *@
+                                    @*                         <div class="form-group mt-4">
+                                    <label asp-for="Image" class="control-label"></label>
+                                    <input type="file" asp-for="Image" class="form-control" accept=".jpg,.png,.jpeg" />
+                                    <span asp-validation-for="Image" class="text-danger"></span>
+                                    </div> *@
+                                    <div class="form-group mt-4">
+                                        <input type="submit" value="Create" class="btn btn-primary" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container px-4 px-lg-5">
+                        <div class="row gx-4 gx-lg-5 justify-content-center">
+                            <div class="col-lg-8 col-md-10 mx-auto">
+                                <form asp-action="Department" enctype="multipart/form-data">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="form-group">
+                                        <label asp-for="@Model.FirstOrDefault().EndDate" class="control-label"></label>
+                                        <input asp-for="@Model.FirstOrDefault().EndDate" class="form-control" required />
+                                        <span asp-validation-for="@Model.FirstOrDefault().EndDate" class="text-danger"></span>
+                                    </div>
+                                    @*                         <div class="form-group mt-4">
+                                    <label asp-for="Description" class="control-label"></label>
+                                    <textarea asp-for="Description" class="form-control" required></textarea>
+                                    <span asp-validation-for="Description" class="text-danger"></span>
+                                    </div> *@
+                                    @*                         <div class="form-group mt-4">
+                                    <label asp-for="Image" class="control-label"></label>
+                                    <input type="file" asp-for="Image" class="form-control" accept=".jpg,.png,.jpeg" />
+                                    <span asp-validation-for="Image" class="text-danger"></span>
+                                    </div> *@
+                                    <div class="form-group mt-4">
+                                        <input type="submit" value="Create" class="btn btn-primary" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                     <div class="popup-buttons-container">
                         <button class="button" onclick="closeAddApplicationPopup()">Close</button>
                         <button class="button" onclick="submitApplication()">Submit</button>
@@ -327,12 +488,8 @@
 
                 <h2 class="application-list-header" onclick="sortTable(0)">Application List</h2>
 
-                <div class="list-buttons-container">
-                    <button class="list-button" onclick="copyList()">Copy</button>
-                    <button class="list-button" onclick="exportToCSV()">CSV</button>
-                    <button class="list-button" onclick="exportToExcel()">Excel</button>
-                    <button class="list-button" onclick="exportToPDF()">PDF</button>
-                    <button class="list-button" onclick="printList()">Print</button>
+                <div class="button-container">
+                    <button class="button" onclick="printPage()">Print Page</button>
                 </div>
 
                 <table class="application-table">
@@ -350,43 +507,27 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Add your table rows here -->
-                        <tr class="odd-row">
-                            <td>John Doe</td>
-                            <td>12345</td>
-                            <td>Vacation</td>
-                            <td>2023-01-01</td>
-                            <td>2023-01-10</td>
-                            <td>2023-01-15</td>
-                            <td>10 days</td>
-                            <td>Pending</td>
-                            <td class="dropdown">
-                                <button class="dropbtn" onclick="toggleDropdown(this)">Actions</button>
-                                <div class="dropdown-content">
-                                    <a href="#">Approve</a>
-                                    <a href="#">Reject</a>
-                                    <!-- Add more actions as needed -->
-                                </div>
-                            </td>
+                        @foreach (var item in Model)
+                        {
+                            <tr class="@(item.Id % 2 == 0 ? "even-row" : "odd-row")">
+
+                                <td>
+                                    @item.EmployeeName
+                                    @item.Pin
+                                    @item.LeaveType
+                                    @item.ApplyDate
+                                    @item.StartDate
+                                    @item.EndDate
+                                    @item.Duration
+                                    @item.LeaveStatus
+
+                                    <div class="button-container">
+                                        <button>Delete</button>
+                                        <button>Edit</button>
+                                    </div>
+                                </td>
                         </tr>
-                        <tr class="even-row">
-                            <td>Jane Smith</td>
-                            <td>67890</td>
-                            <td>Sick Leave</td>
-                            <td>2023-02-01</td>
-                            <td>2023-02-05</td>
-                            <td>2023-02-07</td>
-                            <td>5 days</td>
-                            <td>Approved</td>
-                            <td class="dropdown">
-                                <button class="dropbtn" onclick="toggleDropdown(this)">Actions</button>
-                                <div class="dropdown-content">
-                                    <a href="#">Approve</a>
-                                    <a href="#">Reject</a>
-                                    <!-- Add more actions as needed -->
-                                </div>
-                            </td>
-                        </tr>
+                        }
                         <!-- Add more rows as needed -->
                     </tbody>
                 </table>
@@ -406,29 +547,8 @@
                         closeAddApplicationPopup();
                     }
 
-                    function copyList() {
-                        // Add logic for copying the list
-                        alert("Copying the list!");
-                    }
-
-                    function exportToCSV() {
-                        // Add logic for exporting to CSV
-                        alert("Exporting to CSV!");
-                    }
-
-                    function exportToExcel() {
-                        // Add logic for exporting to Excel
-                        alert("Exporting to Excel!");
-                    }
-
-                    function exportToPDF() {
-                        // Add logic for exporting to PDF
-                        alert("Exporting to PDF!");
-                    }
-
-                    function printList() {
-                        // Add logic for printing the list
-                        alert("Printing the list!");
+                    function printPage() {
+                        window.print();
                     }
 
                     function sortTable(columnIndex) {

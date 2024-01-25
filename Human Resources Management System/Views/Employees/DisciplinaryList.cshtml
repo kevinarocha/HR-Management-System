@@ -33,8 +33,6 @@
 
     <!-- Page Wrapper -->
     <div id="wrapper">
-
-        <!--User.IsInRole("Administrator")-->
         @if (true)
         {
             <!-- Sidebar -->
@@ -67,36 +65,126 @@
                     Interface
                 </div>
 
-                <!-- Nav Item - Pages Collapse Menu -->
+                <!-- Nav Item - Organization Collapse Menu -->
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                        aria-expanded="true" aria-controls="collapseTwo">
                         <i class="fas fa-fw fa-cog"></i>
-                        <span>Components</span>
+                        <span>Organization</span>
                     </a>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Custom Components:</h6>
-                            <a class="collapse-item" href="buttons.html">Buttons</a>
+                            @*  <a class="collapse-item"   href="buttons.html">Department</a> *@
+                            <a class="collapse-item" asp-controller="Organization"
+                               asp-action="Department"> <i class="far fa-folder-open"></i> Department</a>
                             <a class="collapse-item" href="cards.html">Cards</a>
                         </div>
                     </div>
                 </li>
 
-                <!-- Nav Item - Utilities Collapse Menu -->
+                <!-- Nav Item - Employees Collapse Menu -->
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                        aria-expanded="true" aria-controls="collapseUtilities">
                         <i class="fas fa-fw fa-wrench"></i>
-                        <span>Utilities</span>
+                        <span>Employees</span>
                     </a>
                     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                          data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Custom Utilities:</h6>
-                            <a class="collapse-item" href="utilities-color.html">Colors</a>
-                            <a class="collapse-item" href="utilities-border.html">Borders</a>
-                            <a class="collapse-item" href="utilities-animation.html">Animations</a>
+                            <a class="collapse-item" asp-controller="Employees"
+                               asp-action="Employees"><i class="far fa-folder-open"></i> Employees</a>
+                            <a class="collapse-item" asp-controller="Employees"
+                               asp-action="DisciplinaryList"><i class="far fa-folder-open"></i> Disciplinary</a>
+                            <a class="collapse-item" href="utilities-other.html">Other</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Nav Item - Attendance Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#attendanceMenu"
+                       aria-expanded="true" aria-controls="attendanceMenu">
+                        <i class="fas fa-fw fa-wrench"></i>
+                        <span>Attendance</span>
+                    </a>
+                    <div id="attendanceMenu" class="collapse" aria-labelledby="headingUtilities"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Utilities:</h6>
+                            <a class="collapse-item" asp-controller="Attendance"
+                               asp-action="AttendanceList"><i class="far fa-folder-open"></i> Attendance List</a>
+                            <a class="collapse-item" asp-controller="Attendance"
+                               asp-action="AddAttendance"><i class="far fa-folder-open"></i> Add Attendance</a>
+                            <a class="collapse-item" href="utilities-other.html">Other</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Nav Item - Leave Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#leaveMenu"
+                       aria-expanded="true" aria-controls="leaveMenu">
+                        <i class="fas fa-fw fa-wrench"></i>
+                        <span>Leave</span>
+                    </a>
+                    <div id="leaveMenu" class="collapse" aria-labelledby="headingUtilities"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Utilities:</h6>
+                            <a class="collapse-item" asp-controller="Leave"
+                               asp-action="HolidayLeave"><i class="far fa-folder-open"></i> Holiday</a>
+                            <a class="collapse-item" asp-controller="Leave"
+                               asp-action="LeaveType"><i class="far fa-folder-open"></i> Leave Type</a>
+                            <a class="collapse-item" asp-controller="Leave"
+                               asp-action="LeaveApplication"><i class="far fa-folder-open"></i> Leave Application</a>
+                            <a class="collapse-item" asp-controller="Leave"
+                               asp-action="EarnedLeave"><i class="far fa-folder-open"></i> Earned Leave</a>
+
+                            <a class="collapse-item" href="utilities-other.html">Other</a>
+                        </div>
+                    </div>
+                </li>
+
+
+                <!-- Nav Item - Project Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#projectMenu"
+                       aria-expanded="true" aria-controls="projectMenu">
+                        <i class="fas fa-fw fa-wrench"></i>
+                        <span>Project</span>
+                    </a>
+                    <div id="projectMenu" class="collapse" aria-labelledby="headingUtilities"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Utilities:</h6>
+                            <a class="collapse-item" asp-controller="Project"
+                               asp-action="Projects"><i class="far fa-folder-open"></i> Projects</a>
+                            <a class="collapse-item" asp-controller="Project"
+                               asp-action="TaskList"><i class="far fa-folder-open"></i> Task List</a>
+                            <a class="collapse-item" asp-controller="Project"
+                               asp-action="FieldVisit"><i class="far fa-folder-open"></i> Field Visit</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Nav Item - Payroll Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#payrollMenu"
+                       aria-expanded="true" aria-controls="payrollMenu">
+                        <i class="fas fa-fw fa-wrench"></i>
+                        <span>Payroll</span>
+                    </a>
+                    <div id="payrollMenu" class="collapse" aria-labelledby="headingUtilities"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Utilities:</h6>
+                            <a class="collapse-item" asp-controller="Payroll"
+                               asp-action="PayrollList"><i class="far fa-folder-open"></i> Payroll List</a>
+                            <a class="collapse-item" href="utilities-border.html">Disciplinary</a>
+                            <a class="collapse-item" href="utilities-animation.html">Inactive User</a>
                             <a class="collapse-item" href="utilities-other.html">Other</a>
                         </div>
                     </div>
@@ -239,17 +327,13 @@
                 </div>
 
                 <!--End Add Employee and Employee List Buttons-->
-                <!--Beginning Copy/CSV/Excel/PDF/Print Buttons-->
+                <!--Beginning Print Button-->
 
                 <div class="button-container">
-                    <button class="formatted-button" onclick="copyPage()">Copy Page</button>
-                    <button class="formatted-button" onclick="exportToCSV()">Export to CSV</button>
-                    <button class="formatted-button" onclick="exportToExcel()">Export to Excel</button>
-                    <button class="formatted-button" onclick="exportToPDF()">Export to PDF</button>
-                    <button class="formatted-button" onclick="printPage()">Print Page</button>
+                    <button class="button" onclick="printPage()">Print Page</button>
                 </div>
 
-                <!--End Copy/CSV/Excel/PDF/Print Buttons-->
+                <!--End Print Button-->
 
                 <table id="sortableTable">
                     <thead>
@@ -276,7 +360,11 @@
                 </table>
 
                 <script>
-                    // Your JavaScript functions here...
+
+                    function printPage() {
+                        window.print();
+                    }
+
                 </script>
 
             </body>

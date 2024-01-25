@@ -9,45 +9,117 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Human_Resources_Management_System
 build_property.RootNamespace = Human_Resources_Management_System
-build_property.ProjectDir = C:\Users\kevin\Source\Repos\HR-Management-System\Human Resources Management System\
+build_property.ProjectDir = C:\Users\kevin\source\repos\HR-Management-System\Human Resources Management System\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\kevin\Source\Repos\HR-Management-System\Human Resources Management System
+build_property.MSBuildProjectDirectory = C:\Users\kevin\source\repos\HR-Management-System\Human Resources Management System
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/kevin/Source/Repos/HR-Management-System/Human Resources Management System/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Source/Repos/HR-Management-System/Human Resources Management System/Views/Home/Index.cshtml]
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Attendance/AddAttendance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZVxBZGRBdHRlbmRhbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Attendance/AttendanceList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZVxBdHRlbmRhbmNlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Employees/AddEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEFkZEVtcGxveWVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Employees/DisciplinaryList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXERpc2NpcGxpbmFyeUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Employees/Employees.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEVtcGxveWVlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Source/Repos/HR-Management-System/Human Resources Management System/Views/Home/Privacy.cshtml]
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Source/Repos/HR-Management-System/Human Resources Management System/Views/Shared/Error.cshtml]
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Leave/EarnedLeave.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVhdmVcRWFybmVkTGVhdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Leave/HolidayLeave.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVhdmVcSG9saWRheUxlYXZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Leave/LeaveApplication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVhdmVcTGVhdmVBcHBsaWNhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Leave/LeaveType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVhdmVcTGVhdmVUeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Organization/Department.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnYW5pemF0aW9uXERlcGFydG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Payroll/PayrollList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5cm9sbFxQYXlyb2xsTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Project/FieldVisit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxGaWVsZFZpc2l0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Project/Projects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxQcm9qZWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Project/TaskList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxUYXNrTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Source/Repos/HR-Management-System/Human Resources Management System/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Source/Repos/HR-Management-System/Human Resources Management System/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Source/Repos/HR-Management-System/Human Resources Management System/Views/_ViewImports.cshtml]
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Source/Repos/HR-Management-System/Human Resources Management System/Views/_ViewStart.cshtml]
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Source/Repos/HR-Management-System/Human Resources Management System/Views/Shared/_Layout.cshtml]
+[C:/Users/kevin/source/repos/HR-Management-System/Human Resources Management System/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-44nj4usokx

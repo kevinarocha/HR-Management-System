@@ -9,5 +9,7 @@ namespace Human_Resources_Management_System.Models
         public string HolidayName { get; set; }
         public string StartDate { get; set; }
         public string EndDate { get; set; }
+        public string Days {  get; set; }
+        public string Year {  get; set; }
     }
 }

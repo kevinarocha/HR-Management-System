@@ -18,7 +18,6 @@ namespace Human_Resources_Management_System.Data
         public DbSet<Department> Departments { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<LeaveApplication> LeaveApplications { get; set; }
-
         public DbSet<LeaveHoliday> LeaveHolidays { get; set; }
         public DbSet<LeaveType> LeaveTypes { get; set; }
         public DbSet<Payroll> Payrolls { get; set; }
@@ -27,7 +26,4 @@ namespace Human_Resources_Management_System.Data
 
     }
 }
-
-
-
 

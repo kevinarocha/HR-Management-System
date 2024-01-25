@@ -1,6 +1,7 @@
 ﻿@{
     //ViewData["Title"] = "Home Page";
     Layout = null;
+    // Layout = null;
 }
 
 
@@ -75,8 +76,8 @@
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Custom Components:</h6>
                             @*  <a class="collapse-item"   href="buttons.html">Department</a> *@
-                            <a class="collapse-item" asp-controller="Organization"
-                               asp-action="Department"><i class="far fa-folder-open"></i> Department</a>
+                            <a class="collapse-item" asp-controller="Organization" 
+                               asp-action="Department"> <i class="far fa-folder-open"></i> Department</a>
                             <a class="collapse-item" href="cards.html">Cards</a>
                         </div>
                     </div>
@@ -146,6 +147,7 @@
                         </div>
                     </div>
                 </li>
+
 
                 <!-- Nav Item - Project Collapse Menu -->
                 <li class="nav-item">
@@ -312,6 +314,71 @@
             </div>
         </div>
     </div>
+
+
+
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5">
+            <div class="col">
+                <p>
+                    @* <a class="collapse-item" asp-controller="Organization"
+                       asp-action="Department"> <i class="far fa-folder-open"></i> Department</a> *@
+                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
+                    @* <a class="collapse-item" href="cards.html">Cards</a> *@
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="table">
+        <table class = "table table-bordered table-hover">
+            <thead>
+                <tr>
+
+
+                </tr>
+
+            </thead>
+            <tr>
+                <td>
+
+                </td>
+            </tr>
+            <tbody>
+
+            </tbody>
+        </table>
+
+@*     <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmentName)
+            </th>
+            </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {          
+            <tr>
+                        @Html.DisplayFor(modelItem => item.DepartmentName)
+            </tr>
+                }
+
+            </tbody>
+
+            </table> *@
+
+@* 
+             @foreach (var item in Model)
+                {          
+
+                } *@
+
+
 
 
     <!-- Content Wrapper -->

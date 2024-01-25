@@ -1,0 +1,3 @@
+﻿global using Human_Resources_Management_System.Data;
+global using Human_Resources_Management_System.Models;
+global using Human_Resources_Management_System.Repositories;

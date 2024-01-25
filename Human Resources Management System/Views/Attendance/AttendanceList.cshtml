@@ -1,4 +1,4 @@
-﻿@model Human_Resources_Management_System.Models.Attendance;
+﻿@model List<Human_Resources_Management_System.Models.Attendance>;
 
 
 
@@ -35,8 +35,6 @@
 
     <!-- Page Wrapper -->
     <div id="wrapper">
-
-        <!--User.IsInRole("Administrator")-->
         @if (true)
         {
             <!-- Sidebar -->
@@ -69,36 +67,126 @@
                     Interface
                 </div>
 
-                <!-- Nav Item - Pages Collapse Menu -->
+                <!-- Nav Item - Organization Collapse Menu -->
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                        aria-expanded="true" aria-controls="collapseTwo">
                         <i class="fas fa-fw fa-cog"></i>
-                        <span>Components</span>
+                        <span>Organization</span>
                     </a>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Custom Components:</h6>
-                            <a class="collapse-item" href="buttons.html">Buttons</a>
+                            @*  <a class="collapse-item"   href="buttons.html">Department</a> *@
+                            <a class="collapse-item" asp-controller="Organization"
+                               asp-action="Department"> <i class="far fa-folder-open"></i> Department</a>
                             <a class="collapse-item" href="cards.html">Cards</a>
                         </div>
                     </div>
                 </li>
 
-                <!-- Nav Item - Utilities Collapse Menu -->
+                <!-- Nav Item - Employees Collapse Menu -->
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                        aria-expanded="true" aria-controls="collapseUtilities">
                         <i class="fas fa-fw fa-wrench"></i>
-                        <span>Utilities</span>
+                        <span>Employees</span>
                     </a>
                     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                          data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Custom Utilities:</h6>
-                            <a class="collapse-item" href="utilities-color.html">Colors</a>
-                            <a class="collapse-item" href="utilities-border.html">Borders</a>
-                            <a class="collapse-item" href="utilities-animation.html">Animations</a>
+                            <a class="collapse-item" asp-controller="Employees"
+                               asp-action="Employees"><i class="far fa-folder-open"></i> Employees</a>
+                            <a class="collapse-item" asp-controller="Employees"
+                               asp-action="DisciplinaryList"><i class="far fa-folder-open"></i> Disciplinary</a>
+                            <a class="collapse-item" href="utilities-other.html">Other</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Nav Item - Attendance Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#attendanceMenu"
+                       aria-expanded="true" aria-controls="attendanceMenu">
+                        <i class="fas fa-fw fa-wrench"></i>
+                        <span>Attendance</span>
+                    </a>
+                    <div id="attendanceMenu" class="collapse" aria-labelledby="headingUtilities"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Utilities:</h6>
+                            <a class="collapse-item" asp-controller="Attendance"
+                               asp-action="AttendanceList"><i class="far fa-folder-open"></i> Attendance List</a>
+                            <a class="collapse-item" asp-controller="Attendance"
+                               asp-action="AddAttendance"><i class="far fa-folder-open"></i> Add Attendance</a>
+                            <a class="collapse-item" href="utilities-other.html">Other</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Nav Item - Leave Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#leaveMenu"
+                       aria-expanded="true" aria-controls="leaveMenu">
+                        <i class="fas fa-fw fa-wrench"></i>
+                        <span>Leave</span>
+                    </a>
+                    <div id="leaveMenu" class="collapse" aria-labelledby="headingUtilities"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Utilities:</h6>
+                            <a class="collapse-item" asp-controller="Leave"
+                               asp-action="HolidayLeave"><i class="far fa-folder-open"></i> Holiday</a>
+                            <a class="collapse-item" asp-controller="Leave"
+                               asp-action="LeaveType"><i class="far fa-folder-open"></i> Leave Type</a>
+                            <a class="collapse-item" asp-controller="Leave"
+                               asp-action="LeaveApplication"><i class="far fa-folder-open"></i> Leave Application</a>
+                            <a class="collapse-item" asp-controller="Leave"
+                               asp-action="EarnedLeave"><i class="far fa-folder-open"></i> Earned Leave</a>
+
+                            <a class="collapse-item" href="utilities-other.html">Other</a>
+                        </div>
+                    </div>
+                </li>
+
+
+                <!-- Nav Item - Project Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#projectMenu"
+                       aria-expanded="true" aria-controls="projectMenu">
+                        <i class="fas fa-fw fa-wrench"></i>
+                        <span>Project</span>
+                    </a>
+                    <div id="projectMenu" class="collapse" aria-labelledby="headingUtilities"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Utilities:</h6>
+                            <a class="collapse-item" asp-controller="Project"
+                               asp-action="Projects"><i class="far fa-folder-open"></i> Projects</a>
+                            <a class="collapse-item" asp-controller="Project"
+                               asp-action="TaskList"><i class="far fa-folder-open"></i> Task List</a>
+                            <a class="collapse-item" asp-controller="Project"
+                               asp-action="FieldVisit"><i class="far fa-folder-open"></i> Field Visit</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Nav Item - Payroll Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#payrollMenu"
+                       aria-expanded="true" aria-controls="payrollMenu">
+                        <i class="fas fa-fw fa-wrench"></i>
+                        <span>Payroll</span>
+                    </a>
+                    <div id="payrollMenu" class="collapse" aria-labelledby="headingUtilities"
+                         data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Utilities:</h6>
+                            <a class="collapse-item" asp-controller="Payroll"
+                               asp-action="PayrollList"><i class="far fa-folder-open"></i> Payroll List</a>
+                            <a class="collapse-item" href="utilities-border.html">Disciplinary</a>
+                            <a class="collapse-item" href="utilities-animation.html">Inactive User</a>
                             <a class="collapse-item" href="utilities-other.html">Other</a>
                         </div>
                     </div>
@@ -170,10 +258,8 @@
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
+            <!--/Beginning of Attendance List-->
 
-            <!--Beginning Attendance List-->
-
-            <!DOCTYPE html>
             <html lang="en">
             <head>
                 <meta charset="utf-8" />
@@ -257,19 +343,15 @@
                 </div>
 
                 <!--End Add Attendance/Add Bulk Attendance/Attendance Report Buttons -->
-                <!--Beginning Copy/CSV/Excel/PDF/Print Buttons -->
+                <!--Beginning Print Button -->
 
                 <h2 class="attendance-list-header">Attendance List</h2>
 
-                <div class="export-buttons-container">
-                    <button class="button" onclick="copyPage()">Copy Page</button>
-                    <button class="button" onclick="exportToCSV()">Export to CSV</button>
-                    <button class="button" onclick="exportToExcel()">Export to Excel</button>
-                    <button class="button" onclick="exportToPDF()">Export to PDF</button>
+                <div class="button-container">
                     <button class="button" onclick="printPage()">Print Page</button>
                 </div>
 
-                <!--End Copy/CSV/Excel/PDF/Print Buttons -->
+                <!--End Print Button -->
 
 
                 <div class="table-container">
@@ -281,74 +363,44 @@
                                 <th onclick="sortTable(2)">Date</th>
                                 <th onclick="sortTable(3)">Sign In Times</th>
                                 <th onclick="sortTable(4)">Sign Out Times</th>
-                                <th onclick="sortTable(5)">Hours Worked</th>
+                                <th onclick="sortTable(5)">Place</th>
                                 <th onclick="sortTable(6)">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Add your table rows here -->
-                            <tr class="odd-row">
-                                <td>John Doe</td>
-                                <td>12345</td>
-                                <td>2023-01-01</td>
-                                <td>09:00 AM</td>
-                                <td>05:00 PM</td>
-                                <td>8</td>
-                                <td>
-                                    <select>
-                                        <option value="action1">Action 1</option>
-                                        <option value="action2">Action 2</option>
-                                        <!-- Add more options as needed -->
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr class="even-row">
-                                <td>Jane Smith</td>
-                                <td>67890</td>
-                                <td>2023-01-02</td>
-                                <td>09:30 AM</td>
-                                <td>06:00 PM</td>
-                                <td>8.5</td>
-                                <td>
-                                    <select>
-                                        <option value="action1">Action 1</option>
-                                        <option value="action2">Action 2</option>
-                                        <!-- Add more options as needed -->
-                                    </select>
-                                </td>
-                            </tr>
-                            <!-- Add more rows as needed -->
+                            @foreach (var item in Model)
+                            {
+                                <tr class="@(item.Id % 2 == 0 ? "even-row" : "odd-row")">
+                                    <td>@item.Employee</td>
+                                    <td>@item.Id</td>
+                                    <td>@item.Date</td>
+                                    <td>@item.SignInTime</td>
+                                    <td>@item.SignOutTime</td>
+                                    <td>@item.Place</td>
+                                    <td>
+                                        <select>
+                                            <option value="action1">Action 1</option>
+                                            <option value="action2">Action 2</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </td>
+                                </tr>
+                            }
                         </tbody>
                     </table>
                 </div>
 
                 <script>
-                    function goToPage1() {
+                    function gotoPage1() {
                         window.location.href = '/Page1'; // Replace '/Page1' with the actual URL of your first page
                     }
 
-                    function goToPage2() {
+                    function goTopage2() {
                         window.location.href = '/Page2'; // Replace '/Page2' with the actual URL of your second page
                     }
 
-                    function goToPage3() {
+                    function gotopage3() {
                         window.location.href = '/Page3'; // Replace '/Page3' with the actual URL of your third page
-                    }
-
-                    function copyPage() {
-                        alert("Copying the page!");
-                    }
-
-                    function exportToCSV() {
-                        alert("Exporting to CSV!");
-                    }
-
-                    function exportToExcel() {
-                        alert("Exporting to Excel!");
-                    }
-
-                    function exportToPDF() {
-                        alert("Exporting to PDF!");
                     }
 
                     function printPage() {
@@ -397,8 +449,6 @@
         </html>
 
         <!--End Attendance List-->
-
-
         <!-- User.IsInRole("Administrator") -->
             @*    @if (true)
         {

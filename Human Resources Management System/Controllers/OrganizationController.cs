@@ -13,14 +13,27 @@ namespace Human_Resources_Management_System.Controllers
 
         //private readonly ApplicationDbContext _context;
         //private readonly IConfiguration _configuration;
+        public readonly ApplicationDbContext _context;
+
+        public OrganizationController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
 
         public async Task<IActionResult> Department()
         {
+            List<Department> departments = _context.Departments.ToList();
 
-            ViewData["MainText"] = "This is main text";
-            ViewData["SubText"] = "This is subtext";
+            return View(departments);
+        }
 
-            return View();
+        [HttpPost]
+        public async Task<IActionResult> Department([Bind("DepartmentName")] Department department)
+        {
+            _context.Add(department);
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Department");
         }
 
 

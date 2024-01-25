@@ -1,3 +1,4 @@
+using Human_Resources_Management_System;
 using Human_Resources_Management_System.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +16,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+//builder.Services.AddTransient<IOrganizationRepository, OrganizationRepository>();
 
 //builder.Services.AddScoped<DbSeeder>();
 
